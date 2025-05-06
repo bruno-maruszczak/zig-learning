@@ -44,7 +44,7 @@ pub fn Stack(comptime T: type) type {
             errdefer self.alloc.destroy(node);
 
             node.value = value;
-            var top = self.top;
+            const top = self.top;
             node.next = top;
 
             self.top = node;
